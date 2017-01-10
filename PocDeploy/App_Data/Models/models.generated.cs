@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a06d82a857d307c0")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "73f0b83ef677012f")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -62,9 +62,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Startside
 		///</summary>
 		[ImplementPropertyType("umbracoInternalRedirectId")]
-		public object UmbracoInternalRedirectId
+		public IPublishedContent UmbracoInternalRedirectId
 		{
-			get { return this.GetPropertyValue("umbracoInternalRedirectId"); }
+			get { return this.GetPropertyValue<IPublishedContent>("umbracoInternalRedirectId"); }
 		}
 	}
 
@@ -117,6 +117,138 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentPage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Sektioner
+		///</summary>
+		[ImplementPropertyType("sections")]
+		public IEnumerable<IPublishedContent> Sections
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("sections"); }
+		}
+	}
+
+	/// <summary>Call To Action</summary>
+	[PublishedContentModel("Blueprint_CallToAction")]
+	public partial class Blueprint_CallToAction : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "Blueprint_CallToAction";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Blueprint_CallToAction(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Blueprint_CallToAction, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Billede
+		///</summary>
+		[ImplementPropertyType("image")]
+		public IEnumerable<IPublishedContent> Image
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("image"); }
+		}
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
+		}
+	}
+
+	/// <summary>Nyheder</summary>
+	[PublishedContentModel("Blueprint_NewsBand")]
+	public partial class Blueprint_NewsBand : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "Blueprint_NewsBand";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Blueprint_NewsBand(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Blueprint_NewsBand, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Links
+		///</summary>
+		[ImplementPropertyType("links")]
+		public IEnumerable<IPublishedContent> Links
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("links"); }
+		}
+
+		///<summary>
+		/// Nyhedsoversigter
+		///</summary>
+		[ImplementPropertyType("newslists")]
+		public IPublishedContent Newslists
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("newslists"); }
+		}
+	}
+
+	/// <summary>Kampagner</summary>
+	[PublishedContentModel("Blueprint_CampaignTeasers")]
+	public partial class Blueprint_CampaignTeasers : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "Blueprint_CampaignTeasers";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Blueprint_CampaignTeasers(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Blueprint_CampaignTeasers, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Kampagner
+		///</summary>
+		[ImplementPropertyType("campaigns")]
+		public string Campaigns
+		{
+			get { return this.GetPropertyValue<string>("campaigns"); }
 		}
 	}
 
