@@ -1,0 +1,20 @@
+<div class="row small-collapse medium-uncollapse carousel">
+    @@for (var i = 1; i < 4; i++) {
+    <div class="carousel__item columns">
+        <div class="carousel__text">
+            <h1 class="carousel__header">Title`+i+`</h1>
+            <p>Lorem ipsum dolor</p>
+            <p>
+                <a href="#" class="cta cta--white">
+                    <span class="show-for-sr">Link navn</span>
+                    <span class="icon-Pil"></span>
+                </a>
+            </p>
+        </div>
+        <picture>
+            <source srcset="/public/imgs/temp/slide.jpg" media="(min-width: 640px)" />
+            <img class="carousel__image" srcset="/public/imgs/temp/slide-small.jpg" alt="Sample pic" />
+        </picture>
+    </div>
+    }
+</div>

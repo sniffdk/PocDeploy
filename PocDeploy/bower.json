@@ -1,0 +1,24 @@
+{
+  "name": "twins-solutions-starter-kit-for-sites",
+  "version": "1.0.0",
+  "authors": [
+    "Twnis Solutions <twinsdev@twins.net>"
+  ],
+  "description": "Site starter kit with Foundation and angular 1",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2",
+    "slick-carousel": "^1.6.0",
+    "picturefill": "^3.0.2"
+  },
+  "private": true
+}

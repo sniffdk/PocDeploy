@@ -216,3 +216,6 @@ paket-files/
 # Ignore media folder content except the web.config
 **/Media/
 !**/Media/Web.config
+
+# Ignore frontend public folder
+**/public/

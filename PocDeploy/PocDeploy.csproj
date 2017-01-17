@@ -315,8 +315,40 @@
     <Content Include="App_Plugins\NestedContent\Views\nestedcontent.doctypepicker.html" />
     <Content Include="App_Plugins\NestedContent\Views\nestedcontent.editor.html" />
     <Content Include="App_Plugins\NestedContent\Views\nestedcontent.html" />
+    <Content Include="assets\fonts\icomoon.svg" />
+    <Content Include="assets\imgs\faucet.svg" />
+    <Content Include="assets\imgs\file.svg" />
+    <Content Include="assets\imgs\logo.svg" />
+    <Content Include="assets\imgs\metro.svg" />
+    <Content Include="assets\imgs\temp\contentimg.jpg" />
+    <Content Include="assets\imgs\temp\profile.jpg" />
+    <Content Include="assets\imgs\temp\slide-small.jpg" />
+    <Content Include="assets\imgs\temp\slide.jpg" />
+    <Content Include="assets\imgs\temp\textimg.jpg" />
+    <Content Include="assets\imgs\temp\video.jpg" />
+    <Content Include="assets\imgs\ticket.svg" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\pages\index.html" />
+    <Content Include="assets\pages\partials\bottom.html" />
+    <Content Include="assets\pages\partials\footer.html" />
+    <Content Include="assets\pages\partials\header.html" />
+    <Content Include="assets\pages\partials\modules\article.html" />
+    <Content Include="assets\pages\partials\modules\carousel.html" />
+    <Content Include="assets\pages\partials\modules\cookie.html" />
+    <Content Include="assets\pages\partials\modules\directlink.html" />
+    <Content Include="assets\pages\partials\modules\entrance.html" />
+    <Content Include="assets\pages\partials\modules\facts.html" />
+    <Content Include="assets\pages\partials\modules\profile.html" />
+    <Content Include="assets\pages\partials\modules\quickentrance.html" />
+    <Content Include="assets\pages\partials\modules\quicklinks.html" />
+    <Content Include="assets\pages\partials\modules\quote.html" />
+    <Content Include="assets\pages\partials\modules\text.html" />
+    <Content Include="assets\pages\partials\modules\video.html" />
+    <Content Include="assets\pages\partials\top.html" />
+    <Content Include="assets\styleguide\template.html" />
     <Content Include="Config\splashes\booting.aspx" />
     <Content Include="Config\splashes\noNodes.aspx" />
+    <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="Views\Web.config" />
@@ -478,6 +510,38 @@
     <Content Include="Views\Pages\ContentPage.cshtml" />
     <Content Include="App_Plugins\NestedContent\package.manifest" />
     <Content Include="App_Data\packages\installed\installedPackages.config" />
+    <Content Include="bower.json" />
+    <Content Include="config.yml" />
+    <Content Include="package.json" />
+    <Content Include="readme.md" />
+    <Content Include="assets\fonts\icomoon.eot" />
+    <Content Include="assets\fonts\icomoon.ttf" />
+    <Content Include="assets\fonts\icomoon.woff" />
+    <Content Include="assets\scss\app.scss" />
+    <Content Include="assets\scss\components\_article.scss" />
+    <Content Include="assets\scss\components\_button.scss" />
+    <Content Include="assets\scss\components\_carousel.scss" />
+    <Content Include="assets\scss\components\_cookie.scss" />
+    <Content Include="assets\scss\components\_directlink.scss" />
+    <Content Include="assets\scss\components\_entrance.scss" />
+    <Content Include="assets\scss\components\_facts.scss" />
+    <Content Include="assets\scss\components\_footer.scss" />
+    <Content Include="assets\scss\components\_header.scss" />
+    <Content Include="assets\scss\components\_icons.scss" />
+    <Content Include="assets\scss\components\_profile.scss" />
+    <Content Include="assets\scss\components\_quickentrance.scss" />
+    <Content Include="assets\scss\components\_quicklinks.scss" />
+    <Content Include="assets\scss\components\_quote.scss" />
+    <Content Include="assets\scss\components\_text.scss" />
+    <Content Include="assets\scss\components\_video.scss" />
+    <Content Include="assets\scss\shared\_mixins.scss" />
+    <Content Include="assets\scss\shared\_theme.scss" />
+    <Content Include="assets\scss\shared\_typography.scss" />
+    <Content Include="assets\scss\shared\_viewport.scss" />
+    <Content Include="assets\scss\_settings.scss" />
+    <Content Include="assets\styleguide\index.md" />
+    <Content Include="App_Browsers\Form.browser" />
+    <Content Include="App_Browsers\w3cvalidator.browser" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2965,7 +3029,9 @@
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Umbraco_Client\Ui\ui-lightness\jquery-ui.custom.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Bootstrap.cs" />
@@ -2981,6 +3047,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\packages\created\" />
+    <Folder Include="assets\fonts\src\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>

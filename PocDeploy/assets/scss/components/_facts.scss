@@ -1,0 +1,27 @@
+.facts {
+    @include module-padding();
+
+    .cta {
+        margin-bottom: rem-calc(20);
+    }
+}
+
+.facts__item {
+    border-top: 2px solid $medium-gray;
+    padding: rem-calc(20);
+    text-align: center;
+
+    .columns:last-child > & {
+        border-bottom: 2px solid $medium-gray;
+    }
+
+    @include breakpoint(large){
+        border-bottom: 2px solid $medium-gray;
+    }
+} 
+
+.facts__img {
+    max-height: rem-calc(85);
+    max-width: rem-calc(80);
+    margin: rem-calc(20 0);
+}

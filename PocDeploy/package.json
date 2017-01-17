@@ -1,0 +1,31 @@
+{
+  "name": "twins-solutions-gulp-setup-for-sites",
+  "version": "1.0.0",
+  "description": "gulp setup for twins solutions development",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lars Jakobsen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.18.5",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-file-include": "^1.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-mode": "^1.0.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "js-yaml": "^3.7.0",
+    "jshint": "^2.9.3",
+    "rimraf": "^2.5.4",
+    "style-sherpa": "^1.0.1"
+  }
+}

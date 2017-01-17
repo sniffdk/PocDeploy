@@ -1,0 +1,38 @@
+.quicklinks {
+    @include module-padding(rem-calc(5), $global-module-padding, 0, $global-module-padding/2)
+}
+
+.quicklinks__list {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.quicklinks__item {
+    text-align: center;
+    background-color: $light-gray;
+    height: rem-calc(90);
+
+    @include breakpoint(medium down){
+        margin-top: rem-calc(6);
+    }
+}
+
+.quicklinks__link {
+    padding: rem-calc(15);
+    color: $black-text;
+    line-height: rem-calc(90);
+    font-weight: $global-weight-bold;
+    white-space: nowrap;
+
+    @include breakpoint(medium down){
+        display: inline-block;
+        width: 100%;
+        line-height: rem-calc(60);
+    }
+
+    &:after {
+        content: "\203A";
+        display: inline-block;
+        margin-left: rem-calc(5);
+    } 
+}

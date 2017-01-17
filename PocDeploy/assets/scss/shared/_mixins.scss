@@ -1,0 +1,10 @@
+@mixin module-padding($top: $global-module-padding, $bottom: $global-module-padding, $top-small: $global-module-padding/2, $bottom-small: $global-module-padding/2){
+    
+    padding-top: $top-small;
+    padding-bottom: $bottom-small;
+
+    @include breakpoint(medium){
+        padding-top: $top;
+        padding-bottom: $bottom;
+    }
+}

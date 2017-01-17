@@ -1,0 +1,35 @@
+﻿.quote {
+    text-align: center;
+
+    blockquote {
+        font-size: rem-calc(22);
+        font-style: italic;
+
+        @include breakpoint(medium){
+            font-size: rem-calc(30);
+        }
+    }
+
+    cite {
+        font-style: normal;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    footer {
+        margin-top: rem-calc(20);
+    }
+}
+
+.quote__text {
+
+    &:before {
+        content:"\201C";
+    }
+
+    &:after {
+        content:"\201D";
+    }
+}

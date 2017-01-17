@@ -1,0 +1,24 @@
+﻿// Text module
+.text {
+    @include module-padding();
+    
+    text-align: center;
+
+    p {
+        font-size: rem-calc(20);
+        font-weight: $global-weight-bold;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > .button:first-child {
+            margin-top: rem-calc(20);
+            margin-bottom: 0;
+
+            @include breakpoint(medium){
+                margin-top: rem-calc(50);
+            }
+        }
+    }
+}

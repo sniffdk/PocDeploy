@@ -1,0 +1,58 @@
+.video {
+    @include module-padding(rem-calc(90))
+}
+
+.video__wrapper {
+    position: relative;
+    height: rem-calc(145);
+    overflow: hidden;
+
+    @include breakpoint(medium){
+        height: rem-calc(490);
+    }
+}
+
+.video__title {
+    margin: rem-calc(20 0 0);
+}
+
+.video__img {
+    z-index: 1;
+    position: absolute;
+    max-width: none;
+    @include horizontal-center;
+    transform: translate(-50%, 0);
+    transition: transform .4s ease-in-out;
+
+    @include breakpoint(small only){
+        height: rem-calc(275);
+    }
+
+    .video--playing & {
+        transform: translate(-50%, -200%);
+    }
+}
+
+.video__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    .video--loading & {
+        display: none
+    }
+}
+
+.video__container {
+    position: absolute;
+    height: rem-calc(145);
+    width: 100%;
+    background: $light-gray;
+    z-index: 0;
+
+    @include breakpoint(medium){
+        height: rem-calc(490);
+    }
+}

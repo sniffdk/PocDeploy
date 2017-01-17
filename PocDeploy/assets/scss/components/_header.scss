@@ -1,0 +1,163 @@
+@import "../settings";
+
+.header {
+    z-index: 10;
+
+    .title-bar {
+        box-shadow: 0px 3px 5px -1px rgba($black, .15);
+        padding-left: 0;
+        padding-right: 0;
+
+        .show-menu & {
+            z-index: 1001; // wtf?
+        }
+    }
+}
+
+.header__logo {
+    display: block;
+    margin: rem-calc(10 0);
+}
+
+.header__logo-img {
+    width: rem-calc(126);
+
+    @include breakpoint(medium) {
+        width: rem-calc(200);
+    }
+
+    @include breakpoint(large) {
+        width: rem-calc(242);
+    }
+}
+
+.header__nav-link {
+    color: $secondary-color;
+
+    @include breakpoint(medium only) {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        margin: 0;
+    }
+
+    @include breakpoint(large) {
+        margin: rem-calc(0 20);
+    }
+
+    @include breakpoint(xlarge) {
+        margin: rem-calc(0 35);
+    }
+
+    li:last-child > & {
+        padding-right: 0 !important;
+        margin-right: 0;
+    }
+}
+
+.header__menu-btn {
+    font-size: rem-calc(32);
+    line-height: 1;
+    position: absolute;
+    right: rem-calc(30);
+    top: rem-calc(15);
+    font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    color: $medium-gray;
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+
+    &:hover {
+        color: $black;
+    }
+
+    .icon-close {
+        display: none;
+    }
+
+    .show-menu & {
+
+        .icon-close {
+            display: inline;
+        }
+
+        .icon-bars {
+            display: none;
+        }
+    }
+}
+
+// foundation wrapper
+.is-drilldown {
+    pointer-events: none;
+
+    .show-menu & {
+        pointer-events: auto;
+    }
+}
+
+.header__drill {
+    width: 100%;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    top: rem-calc(65);
+    right: 0;
+    bottom: 0;
+    background: $white;
+    color: $secondary-color;
+    min-height: 100%;
+    transform: translate3d(100%,0,0);
+    transition: transform .35s cubic-bezier(0.74, 0.04, 0.24, 0.92);
+    padding-top: rem-calc(10);
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+
+    a {
+        color: $secondary-color;
+        margin: rem-calc(0 15);
+        padding: rem-calc(20 0) !important;
+        border-bottom: 1px solid $medium-gray;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .show-menu & {
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+.is-drilldown-submenu-parent > a:after,
+.js-drilldown-back > a:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e906";
+    border: none;
+    margin-top: rem-calc(-8);
+}
+
+.js-drilldown-back > a {
+    border-bottom: none;
+
+    &:before {
+        content: "\e905";
+        width: rem-calc(20);
+        margin-top: rem-calc(-20);
+    }
+}

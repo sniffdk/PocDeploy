@@ -1,0 +1,45 @@
+.cookie {
+    visibility: hidden;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: rem-calc(250);
+    background: $light-gray;
+    z-index: 10;
+    padding-top: rem-calc(19);
+    padding-bottom: rem-calc(7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity .2s ease-in-out .6s;
+
+    @include breakpoint(medium) {
+        text-align: left;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        transform: translateY(200px);
+        top: auto;
+        left: auto;
+        transition: transform .2s ease-in-out;
+        padding-bottom: 0;
+    }
+
+    p {
+        line-height: 1.25;
+    }
+
+    &.cookie--active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cookie__close {
+    margin-top: rem-calc(4);
+
+    @include breakpoint(medium) {
+        float: right;
+    }
+}

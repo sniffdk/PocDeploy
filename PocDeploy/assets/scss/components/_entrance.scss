@@ -1,0 +1,84 @@
+@import "../settings";
+
+.entrance {
+    @include module-padding();
+
+    & + .entrance {
+        padding-top: 0;
+        
+        @include breakpoint(small only){
+            margin-top: -$global-module-padding;
+        }
+    }
+}
+
+.entrance__wrapper {
+    position: relative;
+    background-color: $primary-color;
+
+    @include breakpoint(medium) {
+        height: rem-calc(500);
+    }
+
+    @include breakpoint(small only) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.entrance__text {
+    text-align: center;
+    padding: rem-calc(30 0);
+
+    @include breakpoint(small only) {
+        order: 2;
+    }
+
+    @include breakpoint(medium) {
+        padding: rem-calc(0 30);
+        width: 50%;
+        @include vertical-center;
+    }
+
+    @include breakpoint(large) {
+        width: 35%;
+    }
+
+    .entrance--flipped & {
+        right: 0;
+    }
+}
+
+.entrance__img-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(small only) {
+        order: 1;
+    }
+
+    @include breakpoint(medium) {
+        height: rem-calc(500);
+        width: 50%;
+        float: right;
+    }
+
+    @include breakpoint(large) {
+        width: 65%;
+    }
+
+    .entrance--flipped & {
+        float: left;
+    }
+}
+
+.entrance__img {
+
+    @include breakpoint(medium) {
+        position: absolute;
+        max-width: none;
+        min-width: 100%;
+        @include horizontal-center;
+        height: rem-calc(500);
+    }
+}

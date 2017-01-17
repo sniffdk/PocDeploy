@@ -1,0 +1,106 @@
+﻿@import "../settings";
+
+.button {
+    border: 1px solid $black;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+    min-width: rem-calc(100);
+
+    &:hover {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+    // Primary
+    &.primary {
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+            color: scale-color($primary-color, $lightness: -20%);
+            border-color: scale-color($primary-color, $lightness: -20%);
+        }
+    }
+    // Secondary
+    &.secondary {
+        border: 2px solid $secondary-color;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: scale-color($secondary-color, $lightness: -20%);
+            border-color: scale-color($secondary-color, $lightness: -20%);
+        }
+    }
+    // orange
+    &.orange {
+        border-color: $primary-color;
+        color: $primary-color;
+
+        &:hover {
+            color: $black;
+            border-color: $black;
+        }
+    }
+    // Icons
+    [class^="icon-"], [class*=" icon-"] {
+        font-size: .85em;
+        margin-left: rem-calc(6);
+    }
+}
+
+.button--white {
+    border-color: $white;
+    color: $white;
+}
+
+.cta {
+    display: inline-block;
+    width: rem-calc(46);
+    height: rem-calc(46);
+    border-radius: rem-calc(23);
+    border: 1px solid $black-text;
+    text-align: center;
+
+    > .icon-Pil {
+        font-size: rem-calc(25);
+        color: $black-text;
+        line-height: rem-calc(44);
+        padding-left: rem-calc(4);
+    }
+
+    &:hover {
+        border-color: $primary-color;
+
+        > .icon-Pil {
+            color: $primary-color;
+        }
+    }
+}
+
+.cta--white {
+    border-color: $white;
+    color: $white;
+
+    > .icon-Pil {
+        color: $white;
+    }
+}
+
+.cta--nohover:hover {
+    border-color: $black-text;
+
+    > .icon-Pil {
+        color: $black-text;
+    }
+}
+
+.cta--play {
+
+    &:after {
+        position: absolute;
+        top: -47%;
+        left: 37%;
+        font-size: 2.8em;
+        content: "\203A";
+    }
+}

@@ -1,0 +1,20 @@
+﻿@import "../_settings.scss";
+
+.theme {}
+
+.theme__bg {
+
+    background-color: $primary-color;
+
+    &.theme--green {
+        background-color: $green;
+    }
+
+    &.theme--cyan {
+        background-color: $cyan;
+    }
+
+    &.theme--gray{
+        background-color: $light-gray;
+    }
+}

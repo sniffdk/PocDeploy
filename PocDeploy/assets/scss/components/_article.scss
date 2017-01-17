@@ -1,0 +1,55 @@
+@import "../settings";
+
+.article {
+    @include module-padding();
+
+    .sticky.is-anchored.is-at-bottom {
+        margin-top: -20px !important; // override inline style :-S
+    }
+}
+
+.article__nav {
+    background: $light-gray;
+    padding: rem-calc(20 0);
+
+
+    @include breakpoint(large) {
+        width: rem-calc(220);
+    }
+
+    @include breakpoint(medium down) {
+        margin-bottom: rem-calc(30);
+
+        .menu {
+            @include clearfix;
+
+            > li {
+                float: left;
+                padding: rem-calc(0 10);
+            }
+        }
+    }
+
+    a {
+        color: $black-text;
+        font-size: rem-calc(16);
+        font-weight: $global-weight-bold;
+
+        &:after {
+            content: "\203A";
+            display: inline-block;
+            margin-left: rem-calc(5);
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.article__content {
+
+    @include breakpoint(medium only) {
+        margin-top: rem-calc(30);
+    }
+}

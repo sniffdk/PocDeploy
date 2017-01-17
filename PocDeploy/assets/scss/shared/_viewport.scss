@@ -1,0 +1,27 @@
+.viewport-label {
+	position: fixed;
+	width: 90px;
+	height: 24px;
+    line-height: 22px;
+	font-weight: 300;
+    text-align: center;
+	bottom: 15px;
+	right: 15px;
+	z-index: 100;
+	font-size: 11px;
+	background-color: $white;
+	color: $dark-gray;
+    text-transform: uppercase;
+	border: 1px solid #C5D1DA;
+    border-radius: 4px;
+
+	&:after {
+        font-weight: bold;
+		font-size: 1.1em;
+        content: 'S';
+       
+        @include breakpoint(medium) { content: "M"; }
+        @include breakpoint(large){ content: "L"; }
+        @include breakpoint(xlarge) { content: "XL"; }
+	}
+}
