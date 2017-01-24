@@ -4,10 +4,6 @@ cache:
 - PocDeploy\node_modules -> PocDeploy\package.json
 - PocDeploy\bower_components -> PocDeploy\bower.json
 
-build:
-  publish_wap: true
-  verbosity: minimal
-
 build_script:
 - build-appveyor.cmd
 

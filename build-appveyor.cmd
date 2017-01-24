@@ -7,13 +7,13 @@ msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSB
 
 ECHO Hello ? :(
 
-ECHO npm --version
-ECHO node --version
+CALL npm --version
+CALL node --version
 
 ECHO Plz
 
-ECHO npm install bower -g
-ECHO npm install gulp-cli -g
+CALL npm install bower -g
+CALL npm install gulp-cli -g
 
 cd PocDeploy
 
