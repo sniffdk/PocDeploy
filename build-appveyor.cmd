@@ -5,6 +5,8 @@ nuget restore
 # Full build of solution takes place
 msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
+ECHO Hello ? :(
+
 node --version
 npm --version
 npm install bower -g
