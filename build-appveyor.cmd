@@ -3,8 +3,8 @@ echo Running build-appveyor.cmd now ...
 echo nuget
 nuget restore
 
-# echo Full build of solution takes place
-# msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+echo build
+# msbuild %APPVEYOR_PROJECT_NAME%.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 echo npm installs - global
 
@@ -23,5 +23,5 @@ call bower install
 echo gulp
 call gulp build --production
 
-echo build
+echo package
 msbuild %APPVEYOR_PROJECT_NAME%.Web.csproj /t:Package /p:PackageLocation=%APPVEYOR_PROJECT_NAME%.Web.zip
