@@ -1,29 +1,29 @@
-ECHO Running build-appveyor.cmd now ...
+echo Running build-appveyor.cmd now ...
 
 nuget restore
 
-# Full build of solution takes place
+echo Full build of solution takes place
 msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
-ECHO Hello ? :(
+echo Hello ? :(
 
-CALL npm --version
-CALL node --version
+call npm --version
+call node --version
 
-ECHO Plz
+echo Plz
 
-CALL npm install bower -g
-CALL npm install gulp-cli -g
+call npm install bower -g
+call npm install gulp-cli -g
 
 cd PocDeploy
 
-ECHO Be nice :)
+echo Be nice :)
 
-ECHO npm install
-ECHO bower install
+call npm install
+call bower install
 
-# JavaScript files created from TypeScript are turned into build artifacts by Gulp
-ECHO gulp build --production
+echo JavaScript files created from TypeScript are turned into build artifacts by Gulp
+call gulp build --production
 
-# Everything that has been built gets packaged
+echo Everything that has been built gets packaged
 msbuild PocDeploy.csproj /t:Package /p:PackageLocation=PocDeploy.zip
