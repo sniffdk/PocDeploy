@@ -1,6 +1,6 @@
 version: 1.0.{build}
 install:
-- ps: Install-Product node 6.9.4 [x64]
+- ps: Install-Product node ''
 cache:
 - packages -> **\packages.config
 - '%APPVEYOR_PROJECT_NAME%.Web\node_modules -> %APPVEYOR_PROJECT_NAME%.Web\package.json'
