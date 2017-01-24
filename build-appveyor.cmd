@@ -8,8 +8,8 @@ msbuild %APPVEYOR_PROJECT_NAME%.sln /logger:"C:\Program Files\AppVeyor\BuildAgen
 
 echo npm installs - global
 
-call npm --version
 call node --version
+call npm --version
 call npm install bower -g
 call npm install gulp-cli -g
 
