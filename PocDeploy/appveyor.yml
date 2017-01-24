@@ -1,0 +1,12 @@
+version: 1.0.{build}
+cache:
+- packages -> PocDeploy\packages.config
+- PocDeploy\node_modules -> PocDeploy\package.json
+- PocDeploy\bower_components -> PocDeploy\bower.json
+
+build_script:
+- build-appveyor.cmd
+
+deploy:
+- provider: Environment
+  name: PocDeploy
