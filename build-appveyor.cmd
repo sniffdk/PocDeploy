@@ -26,4 +26,4 @@ ECHO bower install
 ECHO gulp build --production
 
 # Everything that has been built gets packaged
-msbuild PocDeploy\PocDeploy.csproj /t:Package /p:PackageLocation=PocDeploy.zip
+msbuild PocDeploy.csproj /t:Package /p:PackageLocation=PocDeploy.zip
