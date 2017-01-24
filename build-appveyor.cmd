@@ -7,8 +7,8 @@ msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSB
 
 ECHO Hello ? :(
 
-node --version
 npm --version
+node --version
 
 ECHO Plz
 
