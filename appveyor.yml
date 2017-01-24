@@ -12,7 +12,7 @@ build_script:
 - build-appveyor.cmd
 
 artifacts:
-  - path: PocDeploy.zip
+  - path: PocDeploy\PocDeploy.zip
 
 deploy:
 - provider: Environment
