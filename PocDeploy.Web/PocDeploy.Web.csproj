@@ -834,6 +834,7 @@
     <Content Include="umbraco\Images\Umbraco\userType.gif" />
     <Content Include="umbraco\installer.html" />
     <Content Include="umbraco\Install\Legacy\loadStarterKits.ascx" />
+    <Content Include="umbraco\Install\Views\Web.config" />
     <Content Include="umbraco\Js\app.js" />
     <Content Include="umbraco\Js\canvasdesigner.config.js" />
     <Content Include="umbraco\Js\canvasdesigner.front.js" />
@@ -2894,7 +2895,6 @@
     <Content Include="umbraco\assets\less\shadow.less" />
     <Content Include="umbraco\assets\less\slider.less" />
     <Content Include="umbraco\Install\Views\Index.cshtml" />
-    <Content Include="umbraco\Install\Views\Web.config" />
     <Content Include="umbraco\lib\angular-dynamic-locale\tmhDynamicLocale.min.js.map" />
     <Content Include="umbraco\lib\bootstrap-tabdrop\README.md" />
     <Content Include="umbraco\lib\bootstrap\less\accordion.less" />
