@@ -1,15 +1,14 @@
 version: 1.0.{build}
+install:
+- ps: Install-Product node 6.9.4 [x64]
 cache:
 - packages -> **\packages.config
 - '%APPVEYOR_PROJECT_NAME%.Web\node_modules -> %APPVEYOR_PROJECT_NAME%.Web\package.json'
 - '%APPVEYOR_PROJECT_NAME%.Web\bower_components -> %APPVEYOR_PROJECT_NAME%.Web\bower.json'
-
 build_script:
 - build-appveyor.cmd
-
 artifacts:
-  - path: PocDeploy\PocDeploy.zip
-
+  - path: '%APPVEYOR_PROJECT_NAME%.Web\%APPVEYOR_PROJECT_NAME%.Web.zip'
 deploy:
 - provider: Environment
   name: PocDeploy
