@@ -7,25 +7,23 @@ msbuild PocDeploy.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSB
 
 ECHO Hello ? :(
 
-npm --version
-node --version
+ECHO npm --version
+ECHO node --version
 
 ECHO Plz
 
-npm install bower -g
-npm install gulp-cli -g
+ECHO npm install bower -g
+ECHO npm install gulp-cli -g
 
 cd PocDeploy
 
 ECHO Be nice :)
 
-npm install
-bower install
-
-gulp build --production
+ECHO npm install
+ECHO bower install
 
 # JavaScript files created from TypeScript are turned into build artifacts by Gulp
-gulp build --production
+ECHO gulp build --production
 
 # Everything that has been built gets packaged
 msbuild PocDeploy\PocDeploy.csproj /t:Package /p:PackageLocation=PocDeploy.zip
