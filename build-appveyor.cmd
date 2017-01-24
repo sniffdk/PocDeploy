@@ -14,7 +14,7 @@ call npm install bower -g
 call npm install gulp-cli -g
 
 echo enter project
-cd $(APPVEYOR_PROJECT_NAME).Web
+cd %APPVEYOR_PROJECT_NAME%.Web 
 
 echo npm installs - local
 call npm install
@@ -24,4 +24,4 @@ echo gulp
 call gulp build --production
 
 echo build
-msbuild $(APPVEYOR_PROJECT_NAME).Web.csproj /t:Package /p:PackageLocation=$(APPVEYOR_PROJECT_NAME).Web.zip
+msbuild %APPVEYOR_PROJECT_NAME%.Web.csproj /t:Package /p:PackageLocation=%APPVEYOR_PROJECT_NAME%.Web.zip
