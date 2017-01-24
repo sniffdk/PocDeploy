@@ -7,6 +7,13 @@ cache:
 build_script:
 - build-appveyor.cmd
 
+build:
+  publish_wap: true
+  verbosity: minimal
+
+artifacts:
+  - path: artifacts\*.zip
+
 deploy:
 - provider: Environment
   name: PocDeploy
