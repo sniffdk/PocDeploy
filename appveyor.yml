@@ -1,8 +1,8 @@
 version: 1.0.{build}
 cache:
 - packages -> **\packages.config
-- %APPVEYOR_PROJECT_NAME%.Web\node_modules -> %APPVEYOR_PROJECT_NAME%.Web\package.json
-- %APPVEYOR_PROJECT_NAME%.Web\bower_components -> %APPVEYOR_PROJECT_NAME%.Web\bower.json
+- '%APPVEYOR_PROJECT_NAME%.Web\node_modules' -> '%APPVEYOR_PROJECT_NAME%.Web\package.json'
+- '%APPVEYOR_PROJECT_NAME%.Web\bower_components' -> '%APPVEYOR_PROJECT_NAME%.Web\bower.json'
 
 build_script:
 - build-appveyor.cmd
