@@ -1,3 +1,5 @@
+ECHO Running build-appveyor.cmd now ...
+
 nuget restore
 
 # Full build of solution takes place
