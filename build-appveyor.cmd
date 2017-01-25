@@ -24,4 +24,4 @@ echo gulp
 call gulp build --production
 
 echo package
-msbuild %APPVEYOR_PROJECT_NAME%.Web.csproj /t:Package /p:PackageLocation=%APPVEYOR_PROJECT_NAME%.Web.zip
+msbuild %APPVEYOR_PROJECT_NAME%.Web.csproj /t:Package /p:PackageLocation=%APPVEYOR_PROJECT_NAME%.Web.zip /p:AutoParameterizationWebConfigConnectionStrings=false
